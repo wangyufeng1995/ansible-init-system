@@ -1,0 +1,53 @@
+---
+- name: 安装Telnet
+  yum:
+    name: '{{ item }}'
+  loop:
+    - telnet-server 
+    - xinetd  
+    - gcc 
+    - make 
+    - perl 
+    - lsof
+    - telnet
+
+- name: Telnet启动配置
+  blockinfile:
+    path: /etc/xinetd.d/telnet 
+    block: |-
+        {
+            flags = REUSE
+            socket_type = stream
+            wait = no
+            user = root
+            server =/usr/sbin/in.telnetd
+            log_on_failure += USERID
+            disable = no
+        }
+    state: present
+    create: yes
+    backup: yes
+
+
+- name: 启动Telnet
+  service:
+    name: "{{ item }}"
+    state: started
+    enabled: no
+  loop:
+    - xinetd
+    - telnet
+  ignore_errors: yes
+
+- name: 等待启动23端口
+  wait_for:
+    port: 23
+    host: 127.0.0.1
+
+- name: 脚本拷贝
+  copy: 
+    src: src
+    dest: /tmp/
+
+- name: 升级SSH
+  shell: cd /tmp/src/ && sh update-openssl.sh

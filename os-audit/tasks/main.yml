@@ -1,0 +1,8 @@
+---
+- name: 审计日志配置
+  file: 
+    src: audit.rules
+    dest: /etc/audit/rules.d/audit.rules
+    owner: 'root'
+    group: 'root'
+    backup: yes

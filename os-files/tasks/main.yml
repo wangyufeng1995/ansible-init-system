@@ -1,0 +1,30 @@
+- name: init_file login.defs 
+  template:
+    src: 'login.defs.j2'
+    dest: '/etc/login.defs'
+    owner: 'root'
+    group: 'root'
+    mode: '0444'
+    backup: yes
+
+- name: init_file sysctl.conf
+  file:
+    src: 'sysctl.conf'
+    dest: '/etc/sysctl.conf'
+    owner: 'root'
+    group: 'root'
+    backup: yes
+
+- name: init_file system-auth
+  copy:
+    src: 'system-auth'
+    dest: '/etc/pam.d/system-auth'
+    owner: 'root'
+    group: 'root'
+    backup: yes
+
+- name: init_file Selinux
+  lineinfile:
+    dest: /etc/selinux/config
+    regexp: '^SELINUX='
+    line: 'SELINUX=permissive'

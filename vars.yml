@@ -1,0 +1,11 @@
+os_auth_pw_max_age: 90
+os_auth_pw_min_age: 0
+os_auth_pw_len_str: 8
+os_auth_pw_age_warn: 10
+os_auth_uid_min: 1000
+os_auth_sys_uid_min: 201
+os_auth_sys_uid_max: 999
+os_auth_gid_min: 1000
+os_auth_sys_gid_min: 201
+os_auth_sys_gid_max: 999
+os_env_umask: 027

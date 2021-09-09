@@ -1,0 +1,27 @@
+- hosts: "all"
+  gather_facts: false
+  roles:
+    - { role: os-args }
+  vars:
+  # 1 开启互联网Yum下载常用组件包
+  # 0 关闭不下载对本剧本运行没有影响
+    - internet: 1
+  tags: os-args
+
+- hosts: "all"
+  #gather_facts: false
+  roles:
+    - { role: os-files }
+  vars_files:
+    - ./vars.yml
+
+- hosts: "all"
+  gather_facts: false
+  roles:
+    - { role: os-audit }
+
+- hosts: "all"
+  gather_facts: false
+  roles:
+    - { role: os-ssh }
+  tags: os-ssh
