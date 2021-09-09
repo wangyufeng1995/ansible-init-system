@@ -1,6 +1,6 @@
 [TOC]
 
-# ansible-init-system 初始化系统 与 安全加固  [Heading link](https://github.com/wangyufeng1995/ansible-init-system "Heading link")
+# ansible-init-system 初始化系统 与 安全加固  [Heading link](https://github.com/wangyufeng1995/ansible-init-system "收藏本链接")
 ## Heading 2 link [Heading link](https://github.com/pandao/editor.md "Heading link")
 ### Heading 3 link [Heading link](https://github.com/pandao/editor.md "Heading link")
 #### Heading 4 link [Heading link](https://github.com/pandao/editor.md "Heading link") Heading link [Heading link](https://github.com/pandao/editor.md "Heading link")
