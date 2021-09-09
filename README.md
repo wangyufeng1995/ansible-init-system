@@ -1,7 +1,3 @@
-[TOC]
-![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/github/tag/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
-
-
 # ansible-init-system 初始化系统 与 安全加固  [跳转](https://github.com/wangyufeng1995/ansible-init-system "收藏本链接")
 #### 系统参数变更 [OS-Args](https://github.com/wangyufeng1995/ansible-init-system/blob/main/os-args/tasks/main.yml "OS-Args")
 #### 系统加固文件 [OS-File](https://github.com/wangyufeng1995/ansible-init-system/blob/main/os-files/tasks/main.yml "OS-File")
