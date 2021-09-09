@@ -159,7 +159,9 @@
   user: 
     name: "{{ item.name }}"  
     group: "{{item.group}}" 
-    password: "$6$UJts.K3HfO5/adxe$4u1pVnCs789iahTQYGUPBaJD6qKqPOPriGfTIUvwCbkDdYBAYv8xgNhgfyBGV.G3FhOokRKE5dkjHBMnkTmGx."
+    # 密码生成 python -c "from passlib.hash import sha512_crypt; import getpass; print(sha512_crypt.using(rounds=5000).hash(getpass.getpass()))"
+    # 本密文为 123456
+    password: "$6$q3emIK6itEvs92cS$RBRp8BmZ8xnUuXz62pIMHthD2pC9MfcIsw4ANjS53lCjiQHISttB3g/MJ4cznHNGk1MekFgNc.JcCO1J0ofny."
   with_items: 
     - {name: "admin", group: "root"}
     - {name: "longshine", group: "root"}
